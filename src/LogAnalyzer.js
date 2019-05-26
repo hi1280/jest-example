@@ -12,13 +12,20 @@ class LogAnalyzer {
     }
   }
 
-  doAnalyze(rawData) {
+  // eslint-disable-next-line class-methods-use-this
+  doAnalyze() {
     return {};
   }
 }
 
 class LogLoader {
-  load(fileName) {
+  // eslint-disable-next-line class-methods-use-this
+  load() {
     return {};
   }
 }
+
+module.exports = {
+  LogAnalyzer,
+  LogLoader
+};

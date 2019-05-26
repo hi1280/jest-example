@@ -1,4 +1,4 @@
-class ItemStock {
+module.exports = class ItemStock {
   constructor() {
     this.values = {};
   }
@@ -11,7 +11,7 @@ class ItemStock {
   add(item) {
     const itnm = item && item.name;
     let num = this.values[itnm] || 0;
-    num++;
+    num += 1;
     this.values[itnm] = num;
   }
-}
+};

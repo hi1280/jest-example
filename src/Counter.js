@@ -1,9 +1,10 @@
-class Counter {
+module.exports = class Counter {
   constructor() {
     this.count = 0;
   }
 
   increment() {
-    return ++this.count;
+    this.count += 1;
+    return this.count;
   }
-}
+};

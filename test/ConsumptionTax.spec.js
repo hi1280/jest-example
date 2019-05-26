@@ -1,6 +1,6 @@
-const { assert } = chai;
+const ConsumptionTax = require("../src/ConsumptionTax");
 
-suite("ConsumptionTax suite dynamically", () => {
+describe("ConsumptionTax dynamically", () => {
   const tests = [
     { taxRate: 5, price: 100, expected: 105 },
     { taxRate: 5, price: 3000, expected: 3150 },
@@ -14,7 +14,7 @@ suite("ConsumptionTax suite dynamically", () => {
       tst.expected
     } in consumption tax. If the tax rate of ${tst.taxRate}%`, () => {
       const sut = new ConsumptionTax(tst.taxRate);
-      assert.equal(sut.apply(tst.price), tst.expected);
+      expect(sut.apply(tst.price)).toBe(tst.expected);
     });
   });
 });

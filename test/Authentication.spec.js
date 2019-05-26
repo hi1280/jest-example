@@ -1,8 +1,7 @@
-// var assert = chai.assert;
 const Authentication = require("../src/Authentication");
 const { AccountDao, Account } = require("../src/AccountDao");
 
-describe("Authentication suite", () => {
+describe("Authentication", () => {
   test("not exist account", () => {
     const sut = new Authentication();
     const dao = new AccountDao();

@@ -1,4 +1,4 @@
-class Range {
+module.exports = class Range {
   constructor(min, max) {
     this.min = min;
     this.max = max;
@@ -7,4 +7,4 @@ class Range {
   contains(value) {
     return this.min <= value && value <= this.max;
   }
-}
+};

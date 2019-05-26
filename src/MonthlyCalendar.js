@@ -1,4 +1,4 @@
-class MonthlyCalendar {
+module.exports = class MonthlyCalendar {
   constructor(date) {
     this.date = date;
   }
@@ -9,4 +9,4 @@ class MonthlyCalendar {
       this.date.getDate()
     );
   }
-}
+};

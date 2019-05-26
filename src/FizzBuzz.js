@@ -1,4 +1,4 @@
-class FizzBuzz {
+module.exports = class FizzBuzz {
   static createFizzBuzzList(num) {
     const list = [];
     for (let i = 1; i <= num; i++) {
@@ -14,4 +14,4 @@ class FizzBuzz {
     }
     return list;
   }
-}
+};

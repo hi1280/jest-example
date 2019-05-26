@@ -1,4 +1,4 @@
-class ConsumptionTax {
+module.exports = class ConsumptionTax {
   constructor(rate) {
     this.rate = rate;
   }
@@ -6,4 +6,4 @@ class ConsumptionTax {
   apply(price) {
     return Math.floor(price + (price * this.rate) / 100);
   }
-}
+};

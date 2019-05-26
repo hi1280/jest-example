@@ -1,8 +1,8 @@
-const { assert } = chai;
+const Range = require("../src/Range");
 
-suite("Range suite dynamically", () => {
+describe("Range dynamically", () => {
   let sut = null;
-  setup(() => {
+  beforeEach(() => {
     sut = new Range(0.0, 10.5);
   });
 
@@ -15,7 +15,7 @@ suite("Range suite dynamically", () => {
 
   tests.forEach(tst => {
     test(`${tst.args} is ${tst.expected}`, () => {
-      assert.equal(sut.contains(tst.args), tst.expected);
+      expect(sut.contains(tst.args)).toBe(tst.expected);
     });
   });
 });

@@ -1,38 +1,39 @@
-const { assert } = chai;
+const ItemStock = require("../src/ItemStock");
+const Item = require("../src/Item");
 
-suite("ItemStock suite at Initial", () => {
+describe("ItemStock at Initial", () => {
   let sut = null;
   let book = null;
-  setup(() => {
+  beforeEach(() => {
     sut = new ItemStock();
     book = new Item("book", 3800);
   });
   test("getNum is 0 at initial", () => {
-    assert.equal(sut.getNum(book), 0);
+    expect(sut.getNum(book)).toBe(0);
   });
   test("getNum is 0 at illegal args", () => {
-    assert.equal(sut.getNum(), 0);
+    expect(sut.getNum()).toBe(0);
   });
 });
 
-suite("ItemStock suite after add Item", () => {
+describe("ItemStock after add Item", () => {
   let sut = null;
   let book = null;
-  setup(() => {
+  beforeEach(() => {
     sut = new ItemStock();
     book = new Item("book", 3800);
     sut.add(book);
   });
   test("getNum is 1 after add Item", () => {
-    assert.equal(sut.getNum(book), 1);
+    expect(sut.getNum(book)).toBe(1);
   });
   test("getNum is 2 after add same Item", () => {
     sut.add(book);
-    assert.equal(sut.getNum(book), 2);
+    expect(sut.getNum(book)).toBe(2);
   });
   test("getNum is 1 after add different Item", () => {
     const bike = new Item("bike", 57000);
     sut.add(bike);
-    assert.equal(sut.getNum(book), 1);
+    expect(sut.getNum(book)).toBe(1);
   });
 });

@@ -11,7 +11,13 @@ class NetworkResources {
 }
 
 class NetworkLoader {
+  // eslint-disable-next-line class-methods-use-this
   getInput() {
     return null;
   }
 }
+
+module.exports = {
+  NetworkResources,
+  NetworkLoader
+};
